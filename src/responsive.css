@@ -1,0 +1,215 @@
+
+/* =========================================
+   METROMATE - RESPONSIVE DESIGN
+   Desktop, tablet and mobile
+========================================= */
+
+/* Prevent unwanted horizontal scrolling */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+/* Make common layouts shrink naturally */
+section,
+header,
+footer,
+main {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font: inherit;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboard-stats,
+  .dashboard-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-heading {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.2;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .dashboard-stats,
+  .dashboard-grid,
+  .features-grid,
+  .route-grid,
+  .nearby-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-stat,
+  .dashboard-card,
+  .alternative-route-card,
+  .nearby-station-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 50px 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 52px);
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .planner,
+  .journey-planner,
+  .route-planner {
+    padding: 18px;
+  }
+
+  .planner-grid,
+  .journey-form,
+  .route-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+
+  .metro-map-container,
+  .network-map-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .metro-map-container svg,
+  .network-map-container svg {
+    min-width: 650px;
+  }
+
+  .mm-ai-container,
+  .mm-ai-chat,
+  .mm-ai-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .mm-ai-messages {
+    max-height: 360px;
+    overflow-y: auto;
+  }
+
+  .mm-ai-input {
+    min-width: 0;
+  }
+
+  .journey-tracker {
+    padding: 16px;
+  }
+
+  .journey-tracker button {
+    min-height: 42px;
+  }
+
+  nav {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 38px 14px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  button {
+    min-height: 42px;
+  }
+
+  .dashboard-stats,
+  .dashboard-grid,
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
